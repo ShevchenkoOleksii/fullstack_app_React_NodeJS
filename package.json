@@ -1,0 +1,23 @@
+{
+  "name": "mern_app",
+  "version": "1.0.0",
+  "description": "mern_app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShevchenkoOleksii/fullstack_app_React_NodeJS.git"
+  },
+  "keywords": [
+    "mern",
+    "react"
+  ],
+  "author": "Oleksii Shevchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShevchenkoOleksii/fullstack_app_React_NodeJS/issues"
+  },
+  "homepage": "https://github.com/ShevchenkoOleksii/fullstack_app_React_NodeJS#readme"
+}
