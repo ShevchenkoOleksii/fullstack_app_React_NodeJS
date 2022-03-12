@@ -23,7 +23,8 @@ router.post(
         if (!errors.isEmpty()) {
             return res.status(400).json({
                 errors: errors.array(),
-                message: 'Registration data is invalid'
+                // message: 'Registration data is invalid [auth.routes26]'
+                message: errors.array()[0].msg
             })
         }
 
@@ -31,7 +32,7 @@ router.post(
         const candidate = await User.findOne({email})
 
         if (candidate) {
-           return res.status(400).json({message: `${candidate} the user already exists `})
+           return res.status(400).json({message: `the user already exists`})
         }
 
         const hashedPassword = await bcrypt.hash(password, 12)
@@ -42,7 +43,11 @@ router.post(
         res.status(201).json({message: `User has been created!`})
 
     } catch (e) {
-        res.status(500).json({message: `something went wrong, try again`})
+        console.log(e)
+        const errorMessage = e.array()[0].msg
+        // res.status(500).json({message: `something went wrong, try again`})
+        res.status(500).json({message: `something went wrong 50 ${errorMessage}`})
+
     }
 })
 
