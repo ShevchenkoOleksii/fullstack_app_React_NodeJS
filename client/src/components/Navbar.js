@@ -20,9 +20,16 @@ export const Navbar = () => {
     return (
         <nav>
             <div className="nav-wrapper blue darken-1" style={{padding: '0 2rem'}}>
-                <a href="/" onClick={goHome} className="brand-logo">Logo</a>
+                <a href="/" onClick={goHome} className="brand-logo">
+                    Logo
+                    <i className="large material-icons">language</i>
+                </a>
+
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><NavLink to={'/create'}>Create</NavLink></li>
+                    <li><NavLink to={'/create'}>
+                        Create
+                        {/*<i className="large material-icons">add_circle_outline</i>*/}
+                    </NavLink></li>
                     <li><NavLink to={'/links'}>Links</NavLink></li>
                     <li><a
                         href="/"
