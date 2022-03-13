@@ -19,12 +19,12 @@ app.use('/t', require('./routes/redirect.routes'))
 //         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
 //     })
 // }
-app.use(express.static(path.join(__dirname, "/client/build")));
+app.use('/', express.static(path.join(__dirname, "/client/build")));
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
-// const PORT = config.get("port") || 50002
+// const PORT = config.get("port") || 5000
 const PORT = process.env.PORT || 5000
 
 async function start() {
@@ -34,7 +34,7 @@ async function start() {
             useUnifiedTopology: true,
             useCreateIndex: true
         }))
-        app.listen(PORT, () => {
+        app.listen(process.env.PORT || 5000, () => {
             console.log(`App has been started on port ${PORT}...`)
         })
     } catch (e) {
