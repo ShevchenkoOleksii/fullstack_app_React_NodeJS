@@ -2,6 +2,6 @@
   "port": 5000,
   "jsonWebTokenSecret": "some secret string",
   "mongoUri": "mongodb+srv://Oleksii:qwerty11@cluster0.pop8q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-  "baseUrl": "https://new-mern-application.herokuapp.com/",
-  "baseUrl2": "http://localhost:5000/"
+  "baseUrl": "https://new-mern-application.herokuapp.com",
+  "baseUrl2": "http://localhost:5000"
 }
